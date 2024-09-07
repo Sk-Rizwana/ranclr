@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style></style>
+
+  <body>
+    <div id="main">
+      <button id="btn">Click Me</button>
+      <h2></h2>
+      <p></p>
+    </div>
+    <script>
+      let quo = [
+        '"Patience and perseverance have a magical effect before which difficulties disappear." – John Quincy Adams',
+        '"Positivity is a choice. Choose to see the good in every situation."',
+        '"In the face of adversity, patience is your greatest strength."',
+        '"A positive mindset attracts positive outcomes."',
+        '"With patience, even the smallest steps lead to great results."',
+        '"The calmest minds create the most sustainable solutions."',
+        '"Positivity is the key to unlocking your potential."',
+        '"Patience is the companion of wisdom." – Saint Augustine"',
+        '"The more you practice patience, the more peaceful and productive your path becomes."',
+        '"Embrace challenges with positivity; they are opportunities in disguise."',
+      ];
+      let div1 = document.getElementById("main");
+      div1.style.border = "2px solid ";
+      div1.style.height = "40vh";
+      div1.style.display = "flex";
+      div1.style.flexDirection = "column";
+      div1.style.justifyContent = "center";
+      div1.style.alignItems = "center";
+      div1.style.padding = "12rem";
+      div1.style.color = "white";
+      let btn = document.getElementById("btn");
+      btn.style.height = "40px";
+      btn.style.width = "6rem";
+      btn.style.fontWeight = "bold";
+      btn.style.borderRadius = "25px";
+      btn.style.cursor="pointer"
+      btn.addEventListener("click", () => {
+        let num = document.getElementsByTagName("h2");
+        let x = Math.floor(Math.random() * 89999) + 100000;
+        num[0].innerHTML = `#${x}`;
+        let para = document.getElementsByTagName("p");
+        let y = quo[Math.floor(Math.random() * quo.length)];
+        para[0].innerHTML = y;
+        para[0].style.fontSize = "1.4rem";
+        
+        div1.style.backgroundColor = `#${x}`;
+      });
+    </script>
+  </body>
+</html>
